@@ -11,10 +11,10 @@ interface StatisticHeaderProps {
 }
 
 export const StatisticHeader = ({className}: StatisticHeaderProps) => (
-  <div className={clsx({className, 'statistic-header': true})}>
+  <header className={clsx({className, 'statistic-header': true})}>
     <div className="statistic-header__wrapper">
       <StatisticPagination />
       <UserBlock />
     </div>
-  </div>
+  </header>
 );
