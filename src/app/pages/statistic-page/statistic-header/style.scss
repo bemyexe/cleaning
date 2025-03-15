@@ -1,0 +1,13 @@
+.statistic-header {
+  background-color: var(--main);
+  max-width: 1400px;
+  width: 100%;
+  .statistic-header__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 55px 0 55px 40px;
+    border-radius: 56px 0 0 0;
+    background-color: var(--white);
+  }
+}

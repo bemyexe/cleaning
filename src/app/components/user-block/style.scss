@@ -1,0 +1,40 @@
+.user-block {
+  display: flex;
+  justify-content: space-between;
+  max-width: 360px;
+  width: 100%;
+  .user-block__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .user-block__info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .user-block__info-name {
+        color: var(--main-text);
+        font-weight: 700;
+      }
+
+      .user-block__info-role {
+        font-size: 14px;
+        color: var(--secondary-text-light);
+        font-weight: 600;
+        letter-spacing: 0.15px;
+      }
+    }
+  }
+
+  .expand-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    .expand-button-icon {
+      fill: var(--secondary-text-light);
+      transform: rotate(90deg);
+      height: 14px;
+    }
+  }
+}
