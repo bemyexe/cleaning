@@ -12,6 +12,6 @@ export const ICONS = [
   {Icon: Folder, link: '/files', label: 'Файлы'},
   {Icon: Peeps, link: '/users', label: 'Пользователи'},
   {Icon: Money, link: '/finance', label: 'Финансы'},
-  {Icon: Diagram, link: '/analytics', label: 'Аналитика'},
+  {Icon: Diagram, link: '/statistic', label: 'Аналитика'},
   {Icon: Settings, link: '/settings', label: 'Настройки'},
 ];
