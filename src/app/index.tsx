@@ -4,8 +4,8 @@ import './style.scss';
 
 export const App = () => {
   return (
-    <div>
-      App
+    <div className="app">
+      ₽ 200 000
       <Arrow className="test" />
     </div>
   );
