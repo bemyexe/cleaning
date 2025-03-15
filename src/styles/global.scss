@@ -12,6 +12,12 @@
   font-style: normal;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Proxima Nova', sans-serif;
 }

@@ -1,12 +1,11 @@
-import Arrow from '../assets/arrow.svg?react';
+import {NavigationSidebar} from './components/navigation-side-bar';
 
 import './style.scss';
 
 export const App = () => {
   return (
     <div className="app">
-      ₽ 200 000
-      <Arrow className="test" />
+      <NavigationSidebar />
     </div>
   );
 };
