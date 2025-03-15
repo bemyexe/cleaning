@@ -5,7 +5,7 @@ import './style.scss';
 
 export const App = () => {
   return (
-    <div className="app">
+    <div className="app-wrapper">
       <NavigationSidebar />
       <StatisticPage />
     </div>

@@ -1,1 +1,1 @@
-export const ProblemZoneBlock = () => <div>ProblemZoneBlock</div>;
+export const ProblemZoneBlock = () => <section>ProblemZoneBlock</section>;
