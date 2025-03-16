@@ -1,0 +1,36 @@
+.trend-indicator {
+  padding: 8px 38px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  &.up {
+    background-color: color-mix(in srgb, var(--main) 20%, transparent);
+    color: var(--main);
+    font-weight: 600;
+    font-size: 16px;
+    &.active {
+      background-color: color-mix(in srgb, var(--gray-bg) 25%, transparent);
+      color: var(--white);
+      .trend-indicator-icon {
+        fill: var(--white);
+      }
+    }
+    .trend-indicator-icon {
+      fill: var(--main);
+    }
+  }
+
+  &.down {
+    background-color: color-mix(in srgb, var(--danger-mark) 20%, transparent);
+    color: var(--danger-mark);
+    font-weight: 600;
+    font-size: 16px;
+    .trend-indicator-icon {
+      fill: var(--danger-mark);
+      transform: rotate(180deg);
+    }
+  }
+}

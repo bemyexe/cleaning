@@ -1,4 +1,6 @@
 .statistic-page {
-  max-width: 1400px;
   width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
 }
