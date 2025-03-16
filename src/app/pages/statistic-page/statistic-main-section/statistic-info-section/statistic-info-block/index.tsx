@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import {TrendIndicator} from '../../../../shared/ui/trend-indicator';
+import {TrendIndicator} from '../../../../../../shared/ui/trend-indicator';
 
 import './style.scss';
 
