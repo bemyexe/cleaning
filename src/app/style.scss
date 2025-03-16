@@ -1,6 +1,8 @@
 .app-wrapper {
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
+  max-width: 1530px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3px;
+  margin: 0 auto;
 }

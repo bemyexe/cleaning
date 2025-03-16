@@ -37,34 +37,35 @@ export const StatisticPagination = () => {
     <div className="tabs-container">
       <div className="buttons-container">
         <button
-          className="prev-button"
+          className="button button-prev"
           onClick={prevTab}
           disabled={activeTab === 1}>
-          <Triangle className="prev-button-icon" />
+          <Triangle className="button-icon" />
         </button>
         <button
-          className="next-button"
+          className="button"
           onClick={nextTab}
           disabled={activeTab === tabs.length}>
-          <Triangle className="next-button-icon" />
+          <Triangle className="button-icon" />
         </button>
       </div>
-
-      <div className="tabs-wrapper">
-        {tabs.map((tab, index) => (
-          <button
-            className={clsx({
-              'tab-button': true,
-              active: tab.id === activeTab,
-            })}
-            key={tab.id}
-            ref={(el) => {
-              tabRefs.current[index] = el;
-            }}
-            onClick={() => setActiveTab(tab.id)}>
-            {tab.label}
-          </button>
-        ))}
+      <div className="tabs-container">
+        <div className="tabs-wrapper">
+          {tabs.map((tab, index) => (
+            <button
+              className={clsx({
+                'tab-button': true,
+                active: tab.id === activeTab,
+              })}
+              key={tab.id}
+              ref={(el) => {
+                tabRefs.current[index] = el;
+              }}
+              onClick={() => setActiveTab(tab.id)}>
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
