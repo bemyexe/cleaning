@@ -17,7 +17,7 @@ export const StatisticInfoSection = ({
   active,
   className,
 }: StatisticInfoBlockProps) => (
-  <section className={clsx({className, 'statistic-info-section': true})}>
+  <section className={clsx(className, {'statistic-info-section': true})}>
     {DIVISIONS.map((division, index) => (
       <StatisticInfoBlock
         key={index}

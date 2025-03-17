@@ -1,0 +1,45 @@
+.statistic-chart-section {
+  max-width: 869px;
+  max-height: 426px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 32px;
+  padding: 18px 32px 32px 32px;
+
+  .statistic-chart-section-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    .statistic-chart-section-info__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--main-text);
+    }
+
+    .statistic-chart-section-info__period {
+      display: flex;
+      gap: 15px;
+
+      .statistic-chart-section-info__period-button {
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--main-text);
+        position: relative;
+        &.active {
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: var(--main);
+          }
+        }
+      }
+    }
+  }
+}

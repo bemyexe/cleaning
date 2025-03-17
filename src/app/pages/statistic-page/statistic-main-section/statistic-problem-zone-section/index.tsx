@@ -25,7 +25,7 @@ export const StatisticProblemZoneSection = ({
   className,
 }: StatisticProblemZoneSectionProps) => (
   <section
-    className={clsx({className, 'statistic-problem-zone-section': true})}>
+    className={clsx(className, {'statistic-problem-zone-section': true})}>
     <h1 className="statistic-problem-zone-section__title">Проблемные зоны</h1>
     {ZONES.map((zone, index) => (
       <ProblemZoneItem key={index} zones={zone} sum={100000} />

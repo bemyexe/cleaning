@@ -1,15 +1,17 @@
 .statistic-problem-zone-section {
   max-width: 414px;
+  max-height: 626px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
   background-color: var(--white);
-  padding: 17px 32px;
+  padding: 32px;
   border-radius: 32px;
 
   .statistic-problem-zone-section__title {
     font-size: 20px;
     font-weight: 700;
     color: var(--main-text);
+    padding-bottom: 10px;
   }
 }
