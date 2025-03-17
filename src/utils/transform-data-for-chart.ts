@@ -33,7 +33,7 @@ export const transformData = (
       const {date, amount, type} = transaction;
 
       if (!acc[date]) {
-        acc[date] = {date, income: 0, debt: 0, revenue: 0};
+        acc[date] = {date, income: 0, debt: 0, revenue: 0, expanses: 0};
       }
 
       acc[date][type] += Number(amount);

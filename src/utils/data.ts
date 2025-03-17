@@ -10,5 +10,5 @@ export type DivisionsSum = {[division: string]: number};
 export const DATA: TransactionsByDivision = groupTransactionsForChart(
   generateRandomTransactions(100)
 );
-console.log(DATA);
+
 export const DIVISIONS_SUM: DivisionsSum = calculateYearlySummary(DATA);

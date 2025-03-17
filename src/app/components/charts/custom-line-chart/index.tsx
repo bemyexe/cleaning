@@ -1,9 +1,11 @@
 import {format} from 'date-fns';
 import {
   CartesianGrid,
+  Legend,
   Line,
   LineChart,
   ResponsiveContainer,
+  Tooltip,
   XAxis,
 } from 'recharts';
 
@@ -31,13 +33,15 @@ export const CustomLineChart: React.FC<CustomLineChartProps> = ({data}) => {
     document.documentElement
   ).getPropertyValue('--result-chart');
   return (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer width="100%" height="95%">
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="6" horizontal={false} />
         <XAxis
           dataKey="date"
           tickFormatter={(tick) => format(new Date(tick), 'MMMM')}
         />
+        <Tooltip />
+        <Legend />
         <Line
           type="monotone"
           dataKey="revenue"
