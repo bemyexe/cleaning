@@ -1,6 +1,6 @@
 import {faker} from '@faker-js/faker';
 
-export function getSortedRandomDates(count: number): string[] {
+export const getSortedRandomDates = (count: number): string[] => {
   const dates = new Set<Date>();
 
   while (dates.size < count) {
@@ -9,10 +9,11 @@ export function getSortedRandomDates(count: number): string[] {
       min: 1,
       max: new Date(2024, month + 1, 0).getDate(),
     });
+
     dates.add(new Date(2024, month, day));
   }
 
   return Array.from(dates)
     .sort((a, b) => a.getTime() - b.getTime())
     .map((date) => date.toISOString());
-}
+};
