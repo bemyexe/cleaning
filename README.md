@@ -2,7 +2,7 @@
 
 ### Project
 
-- [https://git-repositories-search.netlify.app/](https://git-repositories-search.netlify.app/)
+- [https://cleaningy.netlify.app/](https://cleaningy.netlify.app/)
 
 ### Stack
 - React + Typescript
