@@ -1,4 +1,5 @@
 import {format} from 'date-fns';
+import {ru} from 'date-fns/locale';
 import {
   CartesianGrid,
   Legend,
@@ -10,6 +11,8 @@ import {
 } from 'recharts';
 
 import {AggregatedTransaction} from '../../../../utils/transform-data-for-chart';
+
+// import {CustomLegend} from './custom-legend';
 
 interface CustomLineChartProps {
   data: AggregatedTransaction[];
@@ -38,7 +41,11 @@ export const CustomLineChart: React.FC<CustomLineChartProps> = ({data}) => {
         <CartesianGrid strokeDasharray="6" horizontal={false} />
         <XAxis
           dataKey="date"
-          tickFormatter={(tick) => format(new Date(tick), 'MMMM')}
+          tickFormatter={(tick) =>
+            format(new Date(tick), 'MMMM', {
+              locale: ru,
+            })
+          }
         />
         <Tooltip />
         <Legend />
