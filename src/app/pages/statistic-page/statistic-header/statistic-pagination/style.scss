@@ -1,7 +1,7 @@
 .tabs-container {
   display: flex;
   align-items: center;
-  max-width: 883px;
+  max-width: 55.1875rem; // 883px;
   gap: 40px;
   overflow: visible;
 
@@ -39,10 +39,10 @@
   .tabs-container {
     padding-bottom: 4px;
     overflow: hidden;
-    max-width: 754px;
+    max-width: 47.125rem; // 754px;
 
     .tabs-wrapper {
-      max-width: 1400px;
+      max-width: 87.5rem; // 1400px;
       display: flex;
       gap: 40px;
       scroll-behavior: smooth;
