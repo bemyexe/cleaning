@@ -1,23 +1,19 @@
 import {TransactionsByDivision} from './group-transactions-by-period';
 
-export interface Transaction {
-  division: string;
-  date: string;
-  amount: string;
-  type: 'income' | 'debt' | 'revenue';
-}
-
 export interface AggregatedTransaction {
   date: string;
   income: number;
   debt: number;
   revenue: number;
+  expanses: number;
 }
+
+export type PeriodType = 'year' | 'month' | 'week';
 
 export const transformData = (
   data: TransactionsByDivision,
   activeDivision: keyof TransactionsByDivision,
-  activePeriod: 'year' | 'month' | 'week'
+  activePeriod: PeriodType
 ): AggregatedTransaction[] => {
   const divisionData = data[activeDivision];
   if (!divisionData || !divisionData[activePeriod]) {
@@ -27,8 +23,7 @@ export const transformData = (
 
   const transactions = divisionData[activePeriod];
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const aggregated = transactions.reduce<Record<string, any>>(
+  const aggregated = transactions.reduce<Record<string, AggregatedTransaction>>(
     (acc, transaction) => {
       const {date, amount, type} = transaction;
 

@@ -2,14 +2,13 @@ import {Transaction} from './generate-random-data';
 import {groupTransactionsForChart} from './group-transactions-by-period';
 
 const calculateBalance = (transactions: Transaction[]) => {
-  return transactions.reduce((acc, t) => {
-    if (t.type === 'revenue') {
-      return acc + Number(t.amount);
-    } else if (t.type === 'expanses') {
-      return acc - Number(t.amount);
-    }
-    return acc;
-  }, 0);
+  return transactions.reduce(
+    (acc, t) =>
+      t.type === 'revenue'
+        ? (acc += Number(t.amount))
+        : (acc -= Number(t.amount)),
+    0
+  );
 };
 
 export const calculateYearlySummary = (

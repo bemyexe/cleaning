@@ -4,23 +4,25 @@ import {getSortedRandomDates} from './get-sorted-random-dates';
 
 type TransactionType = 'expanses' | 'income' | 'revenue' | 'debt';
 
+type DivisionType = 'B2B' | 'B2C';
+
 export interface Transaction {
-  division: 'B2B' | 'B2C';
+  division: DivisionType;
   date: string;
   amount: string;
   type: TransactionType;
 }
 
-export const generateRandomTransactions = (count: number): Transaction[] => {
-  const types: TransactionType[] = ['expanses', 'income', 'revenue', 'debt'];
-  const divisions = ['B2B', 'B2C'];
+const TYPES: TransactionType[] = ['expanses', 'income', 'revenue', 'debt'];
+const DIVISIONS: DivisionType[] = ['B2B', 'B2C'];
 
+export const generateRandomTransactions = (count: number): Transaction[] => {
   const sortedDates = getSortedRandomDates(count);
 
   return Array.from({length: count}, () => ({
-    division: faker.helpers.arrayElement(divisions) as Transaction['division'],
+    division: faker.helpers.arrayElement(DIVISIONS),
     date: sortedDates.shift()!,
     amount: faker.finance.amount({min: 10000, max: 1200000, dec: 0}),
-    type: faker.helpers.arrayElement(types),
+    type: faker.helpers.arrayElement(TYPES),
   }));
 };

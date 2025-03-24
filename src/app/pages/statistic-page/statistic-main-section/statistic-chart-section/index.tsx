@@ -4,13 +4,19 @@ import clsx from 'clsx';
 import {TransactionsByDivision} from '../../../../../utils/group-transactions-by-period';
 import {
   AggregatedTransaction,
+  PeriodType,
   transformData,
 } from '../../../../../utils/transform-data-for-chart';
 import {CustomLineChart} from '../../../../components/charts/custom-line-chart';
 
 import './style.scss';
 
-const PERIOD = [
+interface Period {
+  name: string;
+  type: PeriodType;
+}
+
+const PERIOD: Period[] = [
   {name: 'Неделя', type: 'week'},
   {name: 'Месяц', type: 'month'},
   {name: 'Год', type: 'year'},
@@ -26,7 +32,7 @@ export const StatisticChart = ({
   data,
   activeDivision,
 }: StatisticChartProps) => {
-  const [activePeriod, setActivePeriod] = useState({
+  const [activePeriod, setActivePeriod] = useState<Period>({
     name: 'Год',
     type: 'year',
   });
@@ -34,7 +40,7 @@ export const StatisticChart = ({
     return transformData(
       data,
       activeDivision as keyof TransactionsByDivision,
-      activePeriod.type as 'year' | 'month' | 'week'
+      activePeriod.type
     );
   }, [data, activeDivision, activePeriod]);
 
